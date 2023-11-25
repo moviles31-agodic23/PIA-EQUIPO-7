@@ -1,0 +1,24 @@
+.main{
+    text-align: center;
+}
+
+.info{
+    margin-top: 1rem;
+    ion-col{
+        text-align: center;
+        ion-label{
+            //font-size: 1rem;
+        }
+    }
+}
+
+ion-avatar{
+    //border-radius: 100%;
+    width: 4.5rem;
+    height: 4.5rem;    
+}    
+
+.center{
+    margin: 0 auto;
+    font-size: .9rem;
+}

@@ -1,0 +1,14 @@
+<ion-header [translucent]="true" mode="md">
+  <ion-toolbar>
+    <ion-title>@Ruffles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Informacion del perfil -->
+  <app-informacion-perfil></app-informacion-perfil>
+
+  <!-- grid de fotos -->
+  <app-grid-fotos #grid [fotos]="fotos"></app-grid-fotos>
+
+</ion-content>

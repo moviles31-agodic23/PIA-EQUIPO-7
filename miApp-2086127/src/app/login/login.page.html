@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="container">
+
+        <div class="card-login"> 
+          <div class="header">
+            <div class="logo">
+              <div class="img-logo"></div>                
+            </div>                    
+          </div>
+          
+          <!-- Sign in form -->                        
+          <ion-item-group>                                            
+              <ion-item>
+                  <ion-icon slot="start" name="mail-outline"></ion-icon>
+                  <ion-input mode="ios" label="Usuario*" label-placement="floating" fill="outline" type="usuario"
+                  placeholder="Usuario" [(ngModel)]="usuario">
+                  </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+                  <ion-input mode="ios" label="Password*" label-placement="floating" fill="outline"
+                  placeholder="Password" [(ngModel)]="password" #passwordField type="password">
+                  </ion-input>                            
+                  <ion-icon slot="end" *ngIf="passwordField.type === 'password'" name="eye-off-outline" (click)="passwordField.type = 'text'"></ion-icon>
+                  <ion-icon slot="end" *ngIf="passwordField.type === 'text'" name="eye-outline" (click)="passwordField.type = 'password'"></ion-icon>
+              </ion-item>
+              <ion-item lines="none">
+                  <ion-button class="button-primary" (click)="signIn()">
+                          Iniciar Sesión
+                  </ion-button>                            
+              </ion-item>                        
+          </ion-item-group>                                                
+        </div>
+
+    </div>  
+  </div>
+</ion-content>
