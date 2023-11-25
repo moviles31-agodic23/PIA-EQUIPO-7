@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.page.html',
   styleUrls: ['./tabs.page.scss'],
 })
 export class TabsPage implements OnInit {
-
-  constructor() { }
-
+  constructor(private router: Router) {}
   ngOnInit() {
   }
-
+  
+  logout() {
+    this.router.navigate(['/login']);
+  }
 }

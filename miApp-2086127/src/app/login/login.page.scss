@@ -6,7 +6,7 @@ ion-content {
 .fondo{
     height: 100%;
     perspective: 100px;       
-    //Color de fondo similar a los colores de instagram         
+    //Color de fondo ssimilar a los colores de instagram. Se busco :D      
     background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
 }
 
@@ -17,13 +17,13 @@ ion-content {
     width: 80%;
     height: 70%;    
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
+    top: 50%; //hacia abajo
+    left: 50%; // lado izquierdo
+    transform: translate(-50%, -50%);   //agarra el centro del dip 
     border-radius: 20px;
-    box-shadow: -1rem 1rem 25px rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    overflow: auto;
+    box-shadow: -1rem 1rem 25px rgba(0, 0, 0, 0.5); //sombra
+    padding: 1rem; // un espacio en todo el contorno de color blanco 
+    overflow: auto; // que tenga el scroll 
 }
 
 .card-login{

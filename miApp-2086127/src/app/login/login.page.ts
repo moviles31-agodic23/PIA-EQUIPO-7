@@ -29,6 +29,7 @@ export class LoginPage implements OnInit {
       //Si estaba logeado redireccionar al home para que no se quede en el login
       //ya que ya estaba logeado
       this._router.navigate(["/home"]);
+       //al ingresar del login, va a tomar home como lo primero que muestre
     }
   }
 
@@ -41,9 +42,9 @@ export class LoginPage implements OnInit {
       this.password = null;
 
       //Guardar en local storage que el usuario esta logeado
-      localStorage.setItem('isAuth', 'true');
+      localStorage.setItem('isAuth', 'true'); // que esta auntenticado (true), puede ser cualquier otro mietras sea una cadena 
       // Redireccionar al perfil      
-      this._router.navigate(["/home"]);
+      this._router.navigate(["/perfil"]); // lo direcciona al perfil cuando este auntenticado
     }
   }
 

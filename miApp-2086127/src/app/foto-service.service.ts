@@ -22,7 +22,7 @@ export class FotoServiceService {
   public async addNewToGallery() {
     try {
       let capturedPhoto;
-      if (this.plataforma.is('mobileweb')) {
+      if (this.plataforma.is('mobileweb')) {  //simulador de web o aplicacion desde la web
         capturedPhoto = await Camera.getPhoto({
           resultType: CameraResultType.DataUrl,
           source: CameraSource.Camera,
@@ -48,7 +48,7 @@ export class FotoServiceService {
       console.error('Error al capturar la foto:', error);
     }
   }
-
+//guarda la foto y se combierte en json
   savePhotoToLocalstorage(photo: Foto) {
     try {
       const storedPhotos = this.getStoredPhotos();
@@ -58,10 +58,10 @@ export class FotoServiceService {
       console.error('Error al guardar la foto en localStorage:', error);
     }
   }
-
+// trae todas las fotos que se allan guardado
   getStoredPhotos(): Foto[] {
     const storedPhotosJson = localStorage.getItem('fotos');
-    return storedPhotosJson ? JSON.parse(storedPhotosJson) : [];
+    return storedPhotosJson ? JSON.parse(storedPhotosJson) : []; // si no hay no regresa nada
   }
 
 }

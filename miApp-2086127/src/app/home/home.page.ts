@@ -9,8 +9,8 @@ import { Foto } from '../camera/foto.model';
 })
 export class HomePage implements OnInit {
 
-  showHeart: boolean = false;
-  public fotos: Foto[] = [];
+  showHeart: boolean = false; //muestra el corazon, que en un inicio esta en falso, por eso lo muestra negro
+  public fotos: Foto[] = []; //arreglo de las fotos
 
   constructor(
     public _fotoService: FotoServiceService
@@ -20,12 +20,12 @@ export class HomePage implements OnInit {
     
   }
 
-  ionViewWillEnter(){
+  ionViewWillEnter(){ //ciclo de vida de ionic
     this.getStoredPhotos();
   }
 
   getStoredPhotos() {
-    this.fotos = this._fotoService.getStoredPhotos();
+    this.fotos = this._fotoService.getStoredPhotos(); //todas las fotos que se guardaron las trae y las guarda en la variable fotos
   }
 
 }
